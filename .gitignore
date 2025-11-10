@@ -20,7 +20,6 @@ target/
 .DS_Store
 
 # Model & Runtime
-models/*.bin
 .session/
 *.log
 
