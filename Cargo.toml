@@ -1,0 +1,45 @@
+[package]
+name = "ukr-kb-trainer"
+version = "0.1.0"
+edition = "2021"
+authors = ["OM <om@Mova.Club>"]
+license = "MIT"
+description = "Ukrainian Keyboard Trainer LLM: Neural Language Model for Adaptive Typing Drills"
+
+[dependencies]
+# ML Framework (proven from CJ_tutor)
+# Metal GPU support on macOS M1
+candle-core = { version = "0.8", features = ["accelerate", "metal"] }
+candle-nn = "0.8"
+
+# Terminal UI
+crossterm = "0.27"
+
+# Serialization & Compression
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+brotli = "3.3"
+
+# CLI & Utilities
+clap = { version = "4.5", features = ["derive"] }
+thiserror = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+
+# Data Processing
+regex = "1.10"
+html-escape = "0.2"
+rustc-hash = "2.0"  # Fast hash map for lookups
+
+# Training Utilities
+rand = "0.8"
+rand_chacha = "0.3"
+
+[[bin]]
+name = "ukr-kb-trainer"
+path = "src/main.rs"
+
+[[bin]]
+name = "train"
+path = "src/bin/train.rs"
+

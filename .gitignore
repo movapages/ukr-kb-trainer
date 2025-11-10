@@ -1,0 +1,49 @@
+# Build artifacts
+target/
+*.o
+*.a
+*.so
+*.dylib
+*.rlib
+*.rmeta
+*.d
+
+# Dependencies
+/Cargo.lock
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Model & Runtime
+models/*.bin
+.session/
+*.log
+
+# Reference & Data Processing (Not needed for distribution)
+# Perl scripts (reference only)
+*.pl
+*.pm
+
+# Word frequency analysis (informational, not runtime)
+WC/
+FC/
+
+# Alternative/redundant directories
+stamina/
+
+# Optional: Keep for reference but don't push
+# Uncomment if you want to exclude these too:
+# reference/
+# *.backup
+# *.old
+
+# OS files
+Thumbs.db
+.thumbs.db
+
+
