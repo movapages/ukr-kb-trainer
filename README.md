@@ -136,7 +136,8 @@ src/
   - ✅ Vocabulary: `models/vocab.json` (189 B)
   - ✅ M1 Metal acceleration enabled (10-15× faster)
   - ✅ Batch size 128 (production optimized)
-  - ✅ Training: 3 epochs, 491 minibatches, final loss: 0.6153
+  - ✅ Training: 20 epochs, 441 train + 50 validation examples
+  - ✅ Final loss: 2.434128 | Val loss: 2.549173 | Time: 60.39s
 
 **📊 Total Implementation: 2,200+ lines of code | 6 out of 6 phases complete | READY FOR DEPLOYMENT** 🚀  
 
@@ -365,13 +366,19 @@ echo ".session/" >> .gitignore
 
 ---
 
-## 13. Recent Updates (Phase 5B - Dynamic Features)
+## 13. Recent Updates (Phase 5B & 6B - Dynamic Features & Model Retraining)
 
-**New Features Added:**
+**Phase 5B - Dynamic Features:**
 - ✅ Dynamic word loading from `data/word_pool/{level}.txt`
 - ✅ Progress display: "X/50 words | Accuracy: Y% | Next check: Z words"
 - ✅ Real-time input responsiveness (50ms poll timeout)
 - ✅ Multiple word cycling (not just "мама")
 - ✅ Session end conditions (50 word limit or pool exhausted)
+
+**Phase 6B - Model & Vocabulary Updates:**
+- ✅ Vocabulary expanded to 67 characters (full Ukrainian alphabet: А-Я + а-я)
+- ✅ Model retrained: 20 epochs on 7,727 words
+- ✅ Training metrics: 441 examples, final loss: 2.434128, val loss: 2.549173
+- ⚠️  Note: Training corpus is lowercase only; uppercase support ready for future use
 
 **All critical functionality:** ✅ IMPLEMENTED & TESTED
